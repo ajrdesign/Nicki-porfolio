@@ -1,0 +1,108 @@
+.projects-list{
+	@include clearfix;
+  margin-top: $large-spacing;
+  .masonry{
+    float: left;
+    width: 100%;
+    padding: 0 $small-spacing;
+    box-sizing: border-box;
+    &.four{
+      padding: 0;
+      @include media($medium-screen-up) {
+        padding: 0 $small-spacing;
+        width: 50%;
+      }
+      @include media($large-screen-up) {
+        width: 33.333333333%;
+      }
+      @include media($xlarge-screen-up) {
+        width: 25%;
+      }
+    }
+
+    &.three{
+      padding: 0;
+      @include media($medium-screen-up) {
+        padding: 0 $small-spacing;
+        width: 50%;
+        padding: 0 $small-spacing;
+      }
+      @include media($large-screen-up) {
+        width: 33.333333333%;
+      }
+    }
+
+    &.two{
+      padding: 0;
+      @include media($medium-screen-up) {
+        padding: 0 $small-spacing;
+        width: 50%;
+        padding: 0 $small-spacing;
+      }
+    }
+
+    &.one{
+      padding: 0;
+      @include media($medium-screen-up) {
+        width: 100%;
+      }
+    }
+  }
+  
+	.grid.four{
+  	@include span-columns(12);
+  	@include media($medium-screen-up) {
+    		@include span-columns(6);
+    		@include omega(2n);
+    }
+  	@include media($large-screen-up) {
+    		@include span-columns(4);
+    		@include omega-reset(2n);
+    		@include omega(3n);
+    }
+    @include media($xlarge-screen-up) {
+        @include span-columns(3);
+        @include omega-reset(3n);
+        @include omega(4n);
+    }
+	}
+
+  .grid.three{
+    @include span-columns(12);
+    @include media($medium-screen-up) {
+        @include span-columns(6);
+        @include omega(2n);
+    }
+    @include media($large-screen-up) {
+        @include span-columns(4);
+        @include omega-reset(2n);
+        @include omega(3n);
+    }
+  }
+
+  .grid.two{
+    @include span-columns(12);
+    @include media($medium-screen-up) {
+        @include span-columns(6);
+        @include omega(2n);
+    }
+  }
+
+  .grid.one{
+    @include span-columns(12);
+  }
+
+	img{
+		width: 100%;
+		display: block;
+	}
+
+	h3{
+    font-family: $ui-font-family;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: em(10) 0;
+    margin-bottom: $small-spacing;
+		font-size: modular-scale(-2);
+	}
+}

@@ -1,0 +1,77 @@
+.nav-toggle{
+  z-index: 100;
+  font-size: modular-scale(2);
+  right: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  @include transform(translateY(-50%));
+  margin-top: -4px;
+}
+
+
+.nav{
+  @include clearfix;
+  margin-top: $small-spacing;
+  li{
+    text-transform: uppercase;
+    font-size: modular-scale(-1);
+    letter-spacing: em(1);
+    margin-right: em(10);
+    @include media($medium-screen-up) {
+      display: inline-block;
+      width: auto;
+      margin-bottom: .2em;
+    }
+  }
+}
+
+.menu{
+  margin-bottom: $base-spacing;
+  li{
+    font-family: $ui-font-family;
+    font-size: modular-scale(-1);
+  }
+  a{
+    display: block;
+    padding: $small-spacing 0;
+  }
+  .active{
+    //border-bottom: 2px solid 
+  }
+}
+
+// Reset Custom Logo/Nav Position Options on Mobile Size
+#theme{
+  .logo{
+    @include media($medium-screen-down) {
+      margin-left: 0!important;
+      margin-right: 0!important;
+    }
+  }
+}
+
+
+.logo{
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  h1{
+  cursor: pointer;  
+  font-family: $logo-font-family;
+  font-weight: $logo-font-weight;
+  text-transform: uppercase;
+  letter-spacing: em(1);
+  font-size: modular-scale(3);
+  }
+  h1, svg path{
+  @include transition(fill .3s, color .2s);
+  }
+  img,svg{
+    max-width: em(200);
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+}

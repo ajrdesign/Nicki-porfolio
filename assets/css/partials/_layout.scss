@@ -1,0 +1,119 @@
+body{
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.site-wrapper{
+	@include outer-container(em(1200));
+	padding-bottom: $base-spacing;
+	padding-top: $small-spacing;
+	width: 100%;
+	display: block;
+	overflow-y: hidden;
+	@include media($medium-screen-up) {
+	width: 90%;
+	}
+
+}
+
+
+.header{
+  @include fill-parent();
+  position: relative;
+  display: block;
+}
+
+.logo-wrapper{
+  display: block;
+  position: relative;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  @include media($medium-screen-up) {
+    margin-top: $large-spacing;
+    margin-bottom: -.5em;
+  }
+}
+
+
+.main{
+  //padding-top: $base-spacing;
+  width: 80%;
+  max-width: em(600);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure{
+  width: 120%;
+  margin-left: -10%;
+	text-align: center;
+}
+
+
+//Override theme setting and remove background image on mobile
+#theme{
+	@include media($medium-screen-down) {
+		background-image: none!important;
+		&.sitewrapper{
+			padding: 0!important;
+			margin-bottom: 0!important;
+		}
+	}
+}
+
+
+.footer{
+	margin-bottom: $large-spacing;
+}
+
+.gallery{
+	width: 100%;
+	margin-bottom: $base-spacing;
+}
+
+.gallery-cell{
+	width: 100%;
+	padding: 0 1px;
+}
+
+.flickity-page-dots {
+	max-width: 100%!important;
+	bottom: em(-27px)!important;
+}
+
+
+.next{
+	float: right;
+	clear: right;
+}
+
+.copyright{
+	text-align: center;
+}
+
+
+figure.video { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+figure.video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+
+#theme .gallery button{
+	background-color: transparent;
+	@include transition(background-color .5.0s);
+	&:hover{
+		background-color: rgba(255, 255, 255, .1);
+	}
+}

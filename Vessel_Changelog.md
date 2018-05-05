@@ -1,0 +1,2 @@
+# Vessel V1.1
+Version 1.1 is a small update including revised fonts and better support for CSS transitions. The font stack has been updated to include Vessel Sans, a re-worked custom typeface derived from the open source Montserrat font family.

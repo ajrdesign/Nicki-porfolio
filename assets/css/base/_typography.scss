@@ -1,0 +1,96 @@
+body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  @include media($medium-screen-up) {
+    font-size: $base-font-size*1.1;
+  }
+  @include media($large-screen-up) {
+    font-size: $base-font-size*1.2;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing/2;
+}
+
+p {
+  margin: 0 0 $base-spacing;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  @include transition(color .1s linear);
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-bottom: $base-spacing;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+
+
+//   MODULAR TYPOGRAPHIC SCALE
+
+h1{
+  font-size: modular-scale(3);
+  font-family: $heading-font-family;
+}
+
+h2{
+  font-size: modular-scale(2);
+}
+
+h3{
+  font-size: modular-scale(2);
+}
+
+h4{
+  font-size: modular-scale(1);
+}
+
+h5{
+  font-size: modular-scale(0);
+}
+
+h6{
+  font-size: modular-scale(0);
+}
+
+p{
+  font-size: modular-scale(-1);
+}
