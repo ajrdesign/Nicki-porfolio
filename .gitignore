@@ -4,3 +4,5 @@
 /thumbs/*
 /content/*
 .sass-cache
+.pdf
+config.codekit3
